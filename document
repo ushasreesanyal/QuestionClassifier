@@ -1,0 +1,30 @@
+preprocess.py
+This script is used for the following:
+1. Creating train and dev set from the training dataset
+2. Creating a set of unique label
+3. Creating a set of words present in the dataset with its count (vocabulary)
+
+
+question_classifier.py
+Training and Testing code for both models
+There are two types of embeddings -
+1. Using randomly initialised word embeddings which are created with the help of the vocabulary (words from the training dataset)
+2. Pre-embedded word vector (300d glove vector)
+
+Following functions are used:
+create_sentence_embedding()
+  Create the torch representation of the sentence and the label for each iteration
+get_word_index()
+  Extract the word index from the vocabulary directory
+load_dataset()
+  Extract the dataset from the file and split it into a tuple of label and question
+load_labels()
+  Extract the labels file from the file
+load_vocabulary()
+  Extract the vocabulary from file; which was created in the preprocess stage
+  If the pre-embedding is present, then use that representation
+  else use the vocabulary based on the occurrence of the word (Hardcoded to k=3)
+load_pre_train()
+  Extract the pre-train word embeddings
+load_stop_words()
+  Loading the stop words from the file
