@@ -1,0 +1,16 @@
+path_train: ../data/train.txt
+path_dev: ../data/train.txt
+path_test: ../data/TREC_10.label.txt
+path_vocab: ../data/vocabulary.txt
+path_labels: ../data/label.txt
+path_stop_words: ../data/stopwords.txt
+model: bilstm
+path_model: ../data/model.bilstm
+epoch: 10
+lowercase: False
+path_pre_emb: ../data/glove.small.txt
+word_embedding_dim: 300
+batch_size: 20
+freeze: True
+lr_param: 0.0001
+path_eval_result: ../data/output.bilstm.txt

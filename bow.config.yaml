@@ -1,0 +1,16 @@
+path_train: ../data/train.txt
+path_dev: ../data/development.txt
+path_test: ../data/TREC_10.label.txt
+path_vocab: ../data/vocabulary.txt
+path_labels: ../data/label.txt
+path_stop_words: ../data/stopwords.txt
+model: bow
+path_model: ../data/model.bow
+epoch: 10
+lowercase: False
+path_pre_emb: None
+word_embedding_dim: 300
+batch_size: 20
+freeze: True
+lr_param: 0.001
+path_eval_result: ../data/output.bow.txt
